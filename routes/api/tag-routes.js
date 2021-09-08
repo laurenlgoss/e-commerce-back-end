@@ -43,7 +43,39 @@ router.get('/:id', async (req, res) => {
 
 // POST api/tags/
 router.post('/', async (req, res) => {
-  // create a new tag
+  /* req.body should look like this...
+    {
+      "tag_name": "name",
+      "productIds": [1, 2, 3]
+    }
+  */
+
+  try {
+    // Create new tag
+    const newTag = await Tag.create(req.body);
+
+    // If user gives products,
+    if (req.body.productIds.length) {
+      // Create new array with tag and product ids
+      const productTagIdArray = req.body.productIds.map((product_id) => {
+        return {
+          tag_id: newTag.id,
+          product_id,
+        }
+      });
+
+      // Add product/tag array to product_tag table
+      const newProductTags = await ProductTag.bulkCreate(productTagIdArray);
+
+      return res.status(200).json(newProductTags);
+    } 
+    // If user does not give products,
+    else {
+      res.status(200).json(newTag);
+    }
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 // PUT api/tags/:id
