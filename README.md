@@ -56,7 +56,7 @@ To interact with the `category` table, use the `/api/categories` endpoint. To in
 
 Each route offers a `GET`, `POST`, `PUT`, and `DELETE` HTTP method.
 
-To `POST` or `PUT` a new product, the request body should be formatted as follows:
+To `POST` or `PUT` a product, the request body should be formatted as follows:
 
 ```bash
 {
@@ -67,7 +67,7 @@ To `POST` or `PUT` a new product, the request body should be formatted as follow
 }
 ```
 
-To `POST` or `PUT` a new tag, the request body should be formatted as follows:
+To `POST` or `PUT` a tag, the request body should be formatted as follows:
 
 ```bash
 {
@@ -78,7 +78,13 @@ To `POST` or `PUT` a new tag, the request body should be formatted as follows:
 
 ## Tests
 
-[![Routes Test](./images/e-commerce-test.gif)](https://drive.google.com/file/d/1weFyU24poOl2QGk6X0vcS_KtJTUd8FZ5/view)
+### Setup Walkthrough
+
+[![Setup Walkthrough](./images/e-commerce-setup.gif)](https://drive.google.com/file/d/1HUTUpwcFKmOhlJvmgbVY2Rxq7lbWvhcC/view)
+
+### HTTP Methods
+
+[![Routes Test](./images/e-commerce-routes.gif)](https://drive.google.com/file/d/1weFyU24poOl2QGk6X0vcS_KtJTUd8FZ5/view)
 
 ## Questions
 
