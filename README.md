@@ -78,7 +78,7 @@ To `POST` or `PUT` a new tag, the request body should be formatted as follows:
 
 ## Tests
 
-
+[![Routes Test](./images/e-commerce-test.gif)](https://drive.google.com/file/d/1weFyU24poOl2QGk6X0vcS_KtJTUd8FZ5/view)
 
 ## Questions
 
