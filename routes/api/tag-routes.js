@@ -61,14 +61,14 @@ router.post('/', async (req, res) => {
         return {
           tag_id: newTag.id,
           product_id,
-        }
+        };
       });
 
       // Add product/tag array to product_tag table
       const newProductTags = await ProductTag.bulkCreate(productTagIdArray);
 
       return res.status(200).json(newProductTags);
-    } 
+    }
     // If user does not give products,
     else {
       res.status(200).json(newTag);
